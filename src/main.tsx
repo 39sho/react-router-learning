@@ -5,17 +5,24 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Root from './Root.jsx';
-import Team from './Team.jsx';
+import Root from './Root.js';
+import User from './User.js';
+import UserError from './UserError.js';
 
 const router = createHashRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
   },
   {
-    path: "team",
-    element: <Team />,
+    path: 'User',
+    errorElement: <UserError />,
+    children: [
+      {
+        path: ':userId',
+        element: <User />,
+      }
+    ],
   },
 ]);
 

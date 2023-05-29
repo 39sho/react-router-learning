@@ -3,6 +3,6 @@ export default () => {
     return (
         <>
             <span>Here is Root</span>
-            <Link to="/team">team</Link>
+            <Link to="/user/39sho">39sho</Link>
         </>);
 };
